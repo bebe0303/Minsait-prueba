@@ -11,19 +11,3 @@
     </nav>
     
 </div>
-<main>
-    <div class="container-main" *ngFor="let item of listCountries; index as i">
-        <h2>Pais: {{item.name.common}}</h2>
-        <h3>Capital: {{item.capital}}</h3>
-        <img [src]="listCountries[i].flags.png" alt="bandera" title="bandera">
-        <p>Continente: {{item.continents}}</p>
-
-        <button (click)="showCountriesName(item.name.common)" mat-raised-button color="primary">ver mas</button>
-    
-    </div>
-</main>
-
-
-
-
-

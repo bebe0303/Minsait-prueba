@@ -19,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DatailCountryComponent } from './pages/datail-country/datail-country.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component' ;
 import { AuthService } from './services/auth.service';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AuthService } from './services/auth.service';
     LoginComponent,
     RegisterComponent,
     DatailCountryComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
