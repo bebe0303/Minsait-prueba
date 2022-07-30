@@ -1,0 +1,13 @@
+
+<mat-card class="card"><h2>{{this.country.name?.common}}</h2>
+<mat-list role="list">
+    <mat-list-item role="listitem">Nombre oficial:  {{this.country.name?.official}} </mat-list-item>
+    <mat-list-item role="listitem">Region:    {{this.country.region}}</mat-list-item>
+    <mat-list-item role="listitem">Subregion:  {{this.country.subregion}}</mat-list-item>
+    <mat-list-item role="listitem">Capital:  {{this.country.capital}}</mat-list-item>
+    <mat-list-item role="listitem">Superficie:  {{this.country.area}} m2</mat-list-item>
+    <mat-list-item role="listitem">ISO:  {{this.country.flag}}</mat-list-item>
+    <mat-list-item role="listitem">Población:  {{this.country.population}} habitantes</mat-list-item>
+</mat-list>
+<button mat-raised-button color="primary" (click)=" toBack()"> Regresar </button>
+</mat-card>

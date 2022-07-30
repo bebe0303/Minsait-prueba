@@ -1,0 +1,39 @@
+form {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+  }
+
+  h2{
+    color: #3f51b5;
+  }
+
+  .container-form{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .field{
+    width: 100vw;
+    padding-bottom: 18px;
+  }  
+
+  .btnSendFrom{
+    margin-top: 30px;
+    width: 150px;
+  }
+
+  @media (min-width:500px) {
+    .field, .container-form{
+        width: 500px;
+        
+    }
+    .container-form{
+        margin: 20vh auto 0 auto;
+    }
+    
+  }
