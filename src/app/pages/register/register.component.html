@@ -1,43 +1,46 @@
-
 <mat-card class="container-form">
-   <h2>Registrate aqui</h2> 
-    
-<form [formGroup]="form" (ngSubmit)="sendForm()" >
+    <h2>Registrate aqui</h2>
 
-    <mat-form-field class="field" appearance="fill">
-        <mat-label>Nombre</mat-label>
-        <input type="text" placeholder="Ej. Juan" matInput formControlName="name" required>
-        <ng-container *ngIf="form.get('name')?.touched && form.get('name')?.hasError">
-        </ng-container>
-        <mat-error>
-            el campo es obligatorio
-        </mat-error>
-    </mat-form-field>
+    <form [formGroup]="form" (ngSubmit)="sendForm()">
 
-    <mat-form-field class="field" appearance="fill">
-        <mat-label>Email</mat-label>
-        <input type="email" placeholder="Ej. ejemplo@mail.com" matInput formControlName="email" required>
-        <ng-container *ngIf="form.get('email')?.touched && form.get('email')?.hasError">
-        </ng-container>
-        <mat-error>
-            campo obligatorio y debe ser un correo valido
-        </mat-error>
-    </mat-form-field>
+        <mat-form-field class="field" appearance="fill">
+            <mat-label>Nombre</mat-label>
+            <input type="text" placeholder="Ej. Juan" matInput formControlName="name" required>
+            <ng-container *ngIf="form.get('name')?.touched && form.get('name')?.hasError">
+            </ng-container>
+            <mat-error>
+                el campo es obligatorio
+            </mat-error>
+        </mat-form-field>
 
-    <mat-form-field class="field" appearance="fill">
-        <mat-label>Contraseña</mat-label>
-        <input type="password"  matInput formControlName="password" required>
-        <ng-container *ngIf="form.get('password')?.touched && form.get('password')?.hasError"> </ng-container>   
-        <mat-error>
-          campo obligatorio y 5 caracteres como minimo
-        </mat-error>       
-        
-    </mat-form-field>
+        <mat-form-field class="field" appearance="fill">
+            <mat-label>Email</mat-label>
+            <input type="email" placeholder="Ej. ejemplo@mail.com" matInput formControlName="email" required>
+            <ng-container *ngIf="form.get('email')?.touched && form.get('email')?.hasError">
+            </ng-container>
+            <mat-error>
+                campo obligatorio y debe ser un correo valido
+            </mat-error>
+        </mat-form-field>
 
-   <button [disabled]="form.invalid" class="btnSendFrom" mat-raised-button color="primary" type="submit">Enviar</button>
+        <mat-form-field class="field" appearance="fill">
+            <mat-label>Contraseña</mat-label>
+            <input type="password" matInput formControlName="password" required>
+            <ng-container *ngIf="form.get('password')?.touched && form.get('password')?.hasError"> </ng-container>
+            <mat-error>
+                campo obligatorio y 5 caracteres como minimo
+            </mat-error>
 
-    
-    
-</form>
+        </mat-form-field>
+
+        <button [disabled]="form.invalid" class="btnSendFrom" mat-raised-button color="primary"
+            type="submit">Enviar</button>
+
+
+
+    </form>
+    <p>
+        <a routerLink="/home">Regresar</a>
+    </p>
 
 </mat-card>
